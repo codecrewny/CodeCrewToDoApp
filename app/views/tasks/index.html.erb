@@ -1,0 +1,18 @@
+<h1>All Tasks</h1>
+
+<table class="table">
+	<tr>
+		<th>Title</th>
+		<th>Due Date</th>
+		<th>Description</th>
+		<th>Complete?</th>
+	</tr>
+	<% @tasks.each do |task| %>
+	<tr>
+		<td><%= link_to task.title, task_path(task) %></td>
+		<td><%= task.duedate %></td>
+		<td><%= task.description %></td>
+		<td><%= task.complete ? "Yes!" : "No!" %></td>
+	</tr>
+	<% end %>
+</table>

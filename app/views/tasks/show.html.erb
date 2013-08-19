@@ -1,0 +1,21 @@
+<h1>Viewing: <%= @task.title %></h1>
+
+<p>
+	<strong>Title:</strong>
+	<%= @task.title %>
+</p>
+<p>
+	<strong>Due Date:</strong>
+	<%= @task.duedate %>
+</p>
+<p>
+	<strong>Description</strong>
+	<%= @task.description %>
+</p>
+
+<p>
+	<strong>Complete?</strong>
+	<%= @task.complete ? "Yes!" : "No!" %>
+</p>
+
+<%= link_to "Edit Task", edit_task_path, class: 'btn' %>

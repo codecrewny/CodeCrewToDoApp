@@ -1,0 +1,28 @@
+<h1>Editing: <%= @task.title %></h1>
+<%= form_for :task, url: task_path(@task.id), method: :patch do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :duedate, "Due Date" %><br>
+    <%= f.text_field :duedate %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :complete %>
+    <%= f.check_box :complete %>
+  </p>
+ 
+  <p>
+    <%= f.submit class: 'btn' %>
+  </p>
+<% end %>
+
+<%= button_to "Delete", task_path(@task), method: :delete, confirm: "Are you sure you want to delete this task?", class: 'btn'%>

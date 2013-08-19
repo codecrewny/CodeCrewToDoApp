@@ -1,0 +1,25 @@
+<%= form_for :task, url: tasks_path do |f| %>
+  <p>
+    <%= f.label :title, :id => "blue" %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :duedate, "Due Date" %><br>
+    <%= f.text_field :duedate %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :complete %><br>
+    <%= f.check_box :complete %>
+  </p>
+ 
+  <p>
+    <%= f.submit class: 'btn' %>
+  </p>
+<% end %>
